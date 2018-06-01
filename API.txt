@@ -1,0 +1,71 @@
+localhost:3000
+
+    GET /user - получить всех пользователей (доступ только у админа)
+    POST /user {
+        name,
+        lastname,
+        email,
+        password
+    } - создаем нового пользователя
+    GET /user/:id - получить пользователя по id (доступ только у админа)
+    DELETE /user/:id - удаляем пользователя по id (доступ только у админа)
+    PUT /user/:id {
+            name,
+            lastname,
+            email,
+            password
+    } - обновляем пользователя по id (доступ только у админа)
+
+    GET /news - получить все новости
+    POST /news {
+        title,
+        content
+    } - создать новость (доступ только у админа)
+    GET / news/:id - получить новость по id
+    DELETE /news/:id - удалить новость по id (доступ только у админа)
+    PUT /news/:id {
+        title,
+        content
+    } - обновить новость по id (доступ только у админа)
+
+    GET /initiative - получить все инициативы
+    POST /initiative {
+        title,
+        problem,
+        description,
+        decision,
+        goal,
+        endDate,
+        isConfirmed,
+        votes
+    } - создать инициативу (доступ только у зарегистрированных пользователей)
+    GET / initiative/:id - получить инициативу по id
+    DELETE /initiative/:id - удалить инициативу по id (доступ только у админа)
+    PUT /initiative/:id {
+         title,
+         problem,
+         description,
+         decision,
+         goal,
+         endDate,
+         isConfirmed,
+         votes
+    } - обновить инициативу по id (доступ только у админа)
+
+    GET /comments - получить все коментарии (доступ только у админа)
+    POST /comments {
+         initiativeId
+         comment
+    } - создать коментарий (доступ только у зарегистрированных пользователей)
+    GET / comments/:id - получить коментарий по id (доступ только у админа)
+    DELETE /comments/:id - удалить комментарий по id (доступ только у админа)
+    PUT /comments/:id {
+         initiativeId
+         comment
+    } - обновить комментарий по id (доступ только у админа)
+
+    POST /auth/login {
+        email,
+        password
+    } - логин
+    GET /auth/logout - logout
